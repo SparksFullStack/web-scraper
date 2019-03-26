@@ -22,7 +22,6 @@ const promises = [];
 // * Test Route
 server.get('/test', (req, res) => res.send(`The server is live`));
 
-
 // * Main Route
 server.get('/', (req, res) => {
     // * Making the Requests
@@ -39,8 +38,11 @@ server.get('/', (req, res) => {
                 })
             });
 
+            
+
             perfectReviews.sort(sortReviews); // running the custom sort function
             finalPerfectReviews = perfectReviews.splice(0, 3); // grabbing the top three reviews
+            console.log(finalPerfectReviews);
             res.status(200).send(finalPerfectReviews);
         })
         .catch(err => {
