@@ -1,0 +1,23 @@
+{
+  "name": "web-scraper",
+  "version": "1.0.0",
+  "description": "A web scrapper that gets data about car reviews and outputs the most overly positive ones to the console",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-promise-router": "^3.0.3",
+    "puppeteer": "^1.13.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
