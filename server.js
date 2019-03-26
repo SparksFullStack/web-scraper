@@ -20,11 +20,11 @@ let finalPerfectReviews;
 const promises = [];
 
 // * Test Route
-server.get('/', (req, res) => res.send(`The server is live`));
+server.get('/test', (req, res) => res.send(`The server is live`));
 
 
 // * Main Route
-server.get('/reviews', (req, res) => {
+server.get('/', (req, res) => {
     // * Making the Requests
     for (let i = 1; i <= 5; i++){
         promises.push(rp(url + `page${i}/?filter=ONLY_POSITIVE`)); // we push the promises to an array so they can be run through Promise.all
