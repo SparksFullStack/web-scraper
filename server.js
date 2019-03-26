@@ -2,6 +2,7 @@
 const rp = require('request-promise');
 const $ = require('cheerio');
 const express = require('express');
+const cors = require('cors');
 const port = process.env.PORT || 3001;
 
 // * Initializing the Server
@@ -18,6 +19,8 @@ const sortReviews = require('./sortReviews');
 let perfectReviews = [];
 let finalPerfectReviews;
 const promises = [];
+
+server.use(cors());
 
 // * Test Route
 server.get('/test', (req, res) => res.send(`The server is live`));
