@@ -44,7 +44,7 @@ server.get('/', (req, res) => {
             
 
             perfectReviews.sort(sortReviews); // running the custom sort function
-            finalPerfectReviews = perfectReviews.splice(0, 4); // grabbing the top three reviews
+            finalPerfectReviews = perfectReviews.splice(0, 3); // grabbing the top three reviews
             console.log(finalPerfectReviews);
             res.status(200).send(finalPerfectReviews);
         })
